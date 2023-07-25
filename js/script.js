@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const currentDate = new Date()
   if (currentDate.getDay() === 3) {
-    h1Element.textContent = 'Es ist Mittwoch meine Kerle';
+    h1Element.textContent = 'Es ist Mittwoch, meine Kerle';
   }
   else {
     h1Element.textContent = 'Nein';
