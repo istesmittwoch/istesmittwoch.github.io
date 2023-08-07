@@ -39,7 +39,7 @@ jobs:
         run: npm install -g static-sitemap-cli
 
       - name: Generate sitemaps (txt & xml)
-        run: sscli -b ${{ jobs.deploy.environment.url }} -c '**,weekly'
+        run: sscli -b https://istesmittwoch.de -c '**,weekly'
 
       - name: Setup Pages
         uses: actions/configure-pages@v3
