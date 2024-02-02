@@ -26,6 +26,48 @@ h1 {
   font-size: 5rem;
 }
 
+input {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 4rem;
+  height: 2rem;
+  background: grey;
+  display: block;
+  border-radius: 100px;
+  position: relative;
+}
+
+label:after {
+  content: '';
+  position: absolute;
+  top: 0.25rem;
+  left: 0.25rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: #fff;
+  border-radius: 1.5rem;
+  transition: 0.3s;
+}
+
+input:checked + label {
+  background: #89b4fa;
+}
+
+input:checked + label:after {
+  left: calc(100% - 0.25rem);
+  transform: translateX(-100%);
+}
+
+label:active:after {
+  width: 2.5rem;
+}
+
 @media (prefers-color-scheme: light) {
   /* defaults to light theme */
   body {
