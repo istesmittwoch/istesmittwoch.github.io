@@ -15,21 +15,13 @@ body {
   background-color: var(--bg-color);
   color: var(--text-color);
 
-  height: 100vh;
   margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
-.toggle-container {
+header {
   position: absolute;
   top: 0;
   right: 1.5rem;
-}
-
-h1 {
-  font-size: 5rem;
 }
 
 input {
@@ -72,6 +64,38 @@ input:checked + label:after {
 
 label:active:after {
   width: 2.5rem;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+footer ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+footer ul li {
+  margin-right: 2rem;
+}
+
+footer ul li:not(:last-child)::after {
+  content: "|";
+  margin-left: 2rem;
+}
+
+a {
+  color: #89b4fa;
+  text-decoration: none;
 }
 
 @media (prefers-color-scheme: light) {
