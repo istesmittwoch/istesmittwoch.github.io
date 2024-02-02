@@ -15,11 +15,17 @@ body {
   background-color: var(--bg-color);
   color: var(--text-color);
 
+  height: 100vh;
+  margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  margin: 0;
+}
+
+.toggle-container {
+  position: absolute;
+  top: 0;
+  right: 1.5rem;
 }
 
 h1 {
