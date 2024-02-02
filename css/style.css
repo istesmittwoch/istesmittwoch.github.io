@@ -1,7 +1,19 @@
 body {
+  --text-color: #eee;
+  --bg-color: #121212;
+}
+body.light-theme {
+  --text-color: #222;
+  --bg-color: #fff;
+}
+
+* {
   font-family: Arial, sans-serif;
-  background-color: black;
-  color: white;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
 
   display: flex;
   justify-content: center;
@@ -12,4 +24,16 @@ body {
 
 h1 {
   font-size: 5rem;
+}
+
+@media (prefers-color-scheme: light) {
+  /* defaults to light theme */
+  body {
+    --text-color: #222;
+    --bg-color: #fff;
+  }
+  body.dark-theme {
+    --text-color: #eee;
+    --bg-color: #121212;
+  }
 }
