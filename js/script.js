@@ -11,13 +11,23 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 })
 
-const btn = document.querySelector('#theme-toggle');
+const themeToggle = document.querySelector('#theme-toggle');
 const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+const savedTheme = localStorage.getItem('theme');
 
-btn.addEventListener('click', function () {
-  if (prefersDarkScheme.matches) {
-    document.body.classList.toggle('light-theme');
+if (savedTheme) {
+  document.body.classList.add(savedTheme);
+  themeToggle.checked = savedTheme === 'light-theme';
+} else {
+  document.body.classList.add(prefersDarkScheme.matches ? 'dark-theme' : 'light-theme');
+}
+
+themeToggle.addEventListener('change', () => {
+  if (themeToggle.checked) {
+    document.body.classList.replace('dark-theme', 'light-theme');
+    localStorage.setItem('theme', 'light-theme');
   } else {
-    document.body.classList.toggle('dark-theme');
+    document.body.classList.replace('light-theme', 'dark-theme');
+    localStorage.setItem('theme', 'dark-theme');
   }
 });
