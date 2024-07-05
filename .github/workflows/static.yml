@@ -32,15 +32,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-
-      - name: Install static-sitemap-cli
-        run: npm install -g static-sitemap-cli
-
-      - name: Generate sitemaps (txt & xml)
-        run: sscli -b https://istesmittwoch.de -c '**,weekly'
-
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
