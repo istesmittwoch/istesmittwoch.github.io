@@ -60,3 +60,15 @@ a {
     --bg-color: #fff;
   }
 }
+
+@media only screen and (max-width: 1080px) {
+  h1 {
+    font-size: 3.5rem
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  h1 {
+    font-size: 2rem
+  }
+}
