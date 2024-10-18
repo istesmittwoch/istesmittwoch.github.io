@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const element = document.querySelector('#result');
+  const element = document.querySelector('.answer');
 
   const currentDate = new Date();
   if (currentDate.getDay() === 3) {

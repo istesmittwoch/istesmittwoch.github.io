@@ -35,7 +35,7 @@ jobs:
       - name: Prepare gh-pages upload
         run: |
           mkdir gh-pages
-          cp CNAME dist/index.html ph-pages/.
+          cp CNAME dist/index.html gh-pages
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
