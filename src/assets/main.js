@@ -1,2 +1,1 @@
-const currentDate = new Date()
-document.getElementById('answer').textContent = currentDate.getDay() === 3 ? 'Es ist Mittwoch, meine Kerle' : 'Nein'
+document.getElementById('answer').textContent = (new Date).getDay() === 3 ? 'Es ist Mittwoch, meine Kerle' : 'Nein'
